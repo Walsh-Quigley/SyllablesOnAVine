@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Processor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <label for="user-input">Enter your text:</label>
+    <textarea id="user-input" rows="8" placeholder="Type your message here..."></textarea>
+    <button id="process-btn">Process</button>
+
+    <div id="output-container">
+      <h2>Output:</h2>
+      <pre id="output-text"></pre>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('process-btn').addEventListener('click', () => {
+      const inputText = document.getElementById('user-input').value;
+
+      // Simulate a script processing (you can replace this with actual logic)
+      const processedText = inputText.toUpperCase(); // Example script logic
+
+      document.getElementById('output-text').textContent = processedText;
+    });
+  </script>
+</body>
+</html>
